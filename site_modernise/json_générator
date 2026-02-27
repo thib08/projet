@@ -1,0 +1,28 @@
+import os
+import json
+
+# Dossier contenant les images
+IMAGE_FOLDER = "assets/img"
+
+# Extensions acceptées
+VALID_EXTENSIONS = (".jpg", ".jpeg", ".png", ".webp", ".gif")
+
+def generate_json():
+    images = []
+
+    for file in os.listdir(IMAGE_FOLDER):
+        if file.lower().endswith(VALID_EXTENSIONS):
+            images.append(f"{IMAGE_FOLDER}/{file}")
+
+    # Tri alphabétique automatique
+    images.sort()
+
+    # Sauvegarde dans le JSON
+    with open("assets/json/images.json", "w", encoding="utf-8") as f:
+        json.dump(images, f, indent=4)
+
+    print("images.json généré avec succès !")
+    print(f"{len(images)} images détectées.")
+
+if __name__ == "__main__":
+    generate_json()

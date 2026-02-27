@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Modernisé</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="container nav-content">
+        <h1 class="logo">Saturne</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Accueil</a></li>
+                <li><a href="#gallery">Galerie</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section id="home" class="hero">
+    <div class="container">
+        <h2>Un site moderne et interactif</h2>
+        <p>Clique sur une image pour ouvrir le carrousel.</p>
+    </div>
+</section>
+
+<!-- Galerie -->
+<section id="gallery" class="section">
+    <div class="container">
+        <h2>Galerie</h2>
+        <div class="gallery" id="galleryContainer">
+            <!-- Les images seront injectées ici -->
+        </div>
+    </div>
+</section>
+
+<!-- Modal Carrousel -->
+<div class="modal" id="carouselModal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <button class="prev">&#10094;</button>
+        <img id="carouselImage">
+        <button class="next">&#10095;</button>
+    </div>
+</div>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2026 Saturne - Tous droits réservés.</p>
+    </div>
+</footer>
+
+<script src="assets/js/script.js"></script>
+</body>
+</html>
